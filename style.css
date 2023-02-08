@@ -46,24 +46,31 @@ h1 {
 }
 
 .d {
+  background: url(images/crash.png);
 }
 
 .r {
+  background: url(images/kick.png);
 }
 
 .u {
+  background: url(images/snare.png);
 }
 
 .m {
+  background: url(images/tom1.png);
 }
 
 .M {
+  background: url(images/tom2.png);
 }
 
 .e {
+  background: url(images/tom3.png);
 }
 
 .R {
+  background: url(images/tom4.png);
 }
 
 
