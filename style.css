@@ -90,18 +90,9 @@ h1 {
   background: url(images/tom4.png);
 }
 
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
 .pressed {
   box-shadow: 0 3px 4px 0 #dbedf3;
   opacity: 0.5;
-}
-
-.red {
-  color: red;
 }
 
 footer {

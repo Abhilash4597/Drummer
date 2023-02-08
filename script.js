@@ -15,6 +15,7 @@ const gMusic = new Audio('sounds/tom-4.mp3');
 drum.forEach(element => {
   element.addEventListener('click', (e) => {
     playMusic(e.target.innerText.toLowerCase());
+    clickAnimation(e.target.innerText.toLowerCase());
   })
 });
 
@@ -22,6 +23,7 @@ drum.forEach(element => {
 
 document.addEventListener('keypress', (e) => {
   playMusic(e.key);
+  clickAnimation(e.key);
 })
 
 // # Main function for playing sounds
@@ -60,6 +62,18 @@ function playMusic(element) {
     default:
       console.log('wrong key pressed')
   }
+}
+
+// # animation of clicking
+
+function clickAnimation(value) {
+  let btn = document.querySelector('.' + value);
+
+  btn.classList.add('pressed');
+
+  setTimeout(() => {
+    btn.classList.remove('pressed');
+  }, 100);
 }
 
 // # For music play and pause
