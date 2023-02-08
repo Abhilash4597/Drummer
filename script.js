@@ -6,6 +6,8 @@ const M = document.querySelector('.M');
 const e = document.querySelector('.e');
 const R = document.querySelector('.R');
 const drum = document.querySelectorAll('.drum');
+const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
 
 const dMusic = new Audio('sounds/crash.mp3');
 const rMusic = new Audio('sounds/kick-bass.mp3');
@@ -56,3 +58,16 @@ M.addEventListener('click', click_M);
 e.addEventListener('click', click_e);
 
 R.addEventListener('click', click_R);
+
+let randomNum = Math.floor(Math.random() * 10) + 1;
+// console.log('music' + randomNum + '.mp3');
+let musics = new Audio('musics/music' + randomNum + '.mp3');
+console.log(musics)
+
+play.addEventListener('click', () => {
+  musics.play();
+});
+
+pause.addEventListener('click', () => {
+  musics.pause();
+});

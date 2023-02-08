@@ -17,7 +17,7 @@ body {
 
 h1 {
   font-size: 5rem;
-  margin: 4rem;
+  margin: 4rem 4rem 2rem 4rem;
   color: #dbedf3;
   font-family: 'Arvo', cursive;
   text-shadow: 5px 0 #da0463;
@@ -28,6 +28,23 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn {
+  color: #da0463;
+  box-shadow: 0px 0px 10px #da0463;
+  padding: .5rem 1rem;
+  font-size: .8rem;
+  font-family: 'Arvo', cursive;
+  font-weight: 900;
+  margin: 0px .5rem;
+  cursor: pointer;
+  border: 1px solid #da0463;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  background-color: #fdc2de;
 }
 
 .drum {
@@ -41,7 +58,7 @@ h1 {
   border-radius: 15px;
   width: 150px;
   height: 150px;
-  margin: 10px;
+  margin: 5px 0px 10px 0px;
   cursor: pointer;
 }
 
