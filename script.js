@@ -1,3 +1,4 @@
+const drum = document.querySelectorAll('.drum');
 const d = document.querySelector('.d');
 const r = document.querySelector('.r');
 const u = document.querySelector('.u');
@@ -5,7 +6,6 @@ const m = document.querySelector('.m');
 const M = document.querySelector('.M');
 const e = document.querySelector('.e');
 const R = document.querySelector('.R');
-const drum = document.querySelectorAll('.drum');
 const play = document.querySelector('.play');
 const pause = document.querySelector('.pause');
 
