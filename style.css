@@ -78,18 +78,17 @@ h1 {
   background: url(images/tom1.png);
 }
 
-.M {
+.i {
   background: url(images/tom2.png);
 }
 
-.e {
+.n {
   background: url(images/tom3.png);
 }
 
-.R {
+.g {
   background: url(images/tom4.png);
 }
-
 
 .game-over {
   background-color: red;

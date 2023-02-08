@@ -3,9 +3,9 @@ const d = document.querySelector('.d');
 const r = document.querySelector('.r');
 const u = document.querySelector('.u');
 const m = document.querySelector('.m');
-const M = document.querySelector('.M');
-const e = document.querySelector('.e');
-const R = document.querySelector('.R');
+const i = document.querySelector('.i');
+const n = document.querySelector('.n');
+const g = document.querySelector('.g');
 const play = document.querySelector('.play');
 const pause = document.querySelector('.pause');
 
@@ -13,9 +13,9 @@ const dMusic = new Audio('sounds/crash.mp3');
 const rMusic = new Audio('sounds/kick-bass.mp3');
 const uMusic = new Audio('sounds/snare.mp3');
 const mMusic = new Audio('sounds/tom-1.mp3');
-const MMusic = new Audio('sounds/tom-2.mp3');
-const eMusic = new Audio('sounds/tom-3.mp3');
-const RMusic = new Audio('sounds/tom-4.mp3');
+const iMusic = new Audio('sounds/tom-2.mp3');
+const nMusic = new Audio('sounds/tom-3.mp3');
+const gMusic = new Audio('sounds/tom-4.mp3');
 
 function click_d() {
   dMusic.play();
@@ -33,16 +33,16 @@ function click_m() {
   mMusic.play();
 };
 
-function click_M() {
-  MMusic.play();
+function click_i() {
+  iMusic.play();
 };
 
-function click_e() {
-  eMusic.play();
+function click_n() {
+  nMusic.play();
 };
 
-function click_R() {
-  RMusic.play();
+function click_g() {
+  gMusic.play();
 };
 
 d.addEventListener('click', click_d);
@@ -53,11 +53,11 @@ u.addEventListener('click', click_u);
 
 m.addEventListener('click', click_m);
 
-M.addEventListener('click', click_M);
+i.addEventListener('click', click_i);
 
-e.addEventListener('click', click_e);
+n.addEventListener('click', click_n);
 
-R.addEventListener('click', click_R);
+g.addEventListener('click', click_g);
 
 let randomNum = Math.floor(Math.random() * 10) + 1;
 // console.log('music' + randomNum + '.mp3');
@@ -71,3 +71,42 @@ play.addEventListener('click', () => {
 pause.addEventListener('click', () => {
   musics.pause();
 });
+
+function checkKeyPress(e) {
+  let keys = e.key;
+
+  switch (keys) {
+    case 'd':
+      dMusic.play();
+      break;
+
+    case 'r':
+      rMusic.play();
+      break;
+
+    case 'u':
+      uMusic.play();
+      break;
+
+    case 'm':
+      mMusic.play();
+      break;
+
+    case 'i':
+      iMusic.play();
+      break;
+
+    case 'n':
+      nMusic.play();
+      break;
+
+    case 'g':
+      gMusic.play();
+      break;
+    
+    default:
+      console.log('wrong key pressed')
+  }
+}
+
+document.addEventListener('keypress', checkKeyPress)
