@@ -1,11 +1,4 @@
 const drum = document.querySelectorAll('.drum');
-const d = document.querySelector('.d');
-const r = document.querySelector('.r');
-const u = document.querySelector('.u');
-const m = document.querySelector('.m');
-const i = document.querySelector('.i');
-const n = document.querySelector('.n');
-const g = document.querySelector('.g');
 const play = document.querySelector('.play');
 const pause = document.querySelector('.pause');
 
@@ -17,52 +10,54 @@ const iMusic = new Audio('sounds/tom-2.mp3');
 const nMusic = new Audio('sounds/tom-3.mp3');
 const gMusic = new Audio('sounds/tom-4.mp3');
 
-function click_d() {
-  dMusic.play();
-};
+// # for clicking on box
 
-function click_r() {
-  rMusic.play();
-};
+function checkClick(e) {
+  let click = e.target.innerText;
 
-function click_u() {
-  uMusic.play();
-};
+  switch (click) {
+    case 'D':
+      dMusic.play();
+      break;
 
-function click_m() {
-  mMusic.play();
-};
+    case 'R':
+      rMusic.play();
+      break;
 
-function click_i() {
-  iMusic.play();
-};
+    case 'U':
+      uMusic.play();
+      break;
 
-function click_n() {
-  nMusic.play();
-};
+    case 'M':
+      mMusic.play();
+      break;
 
-function click_g() {
-  gMusic.play();
-};
+    case 'I':
+      iMusic.play();
+      break;
 
-d.addEventListener('click', click_d);
+    case 'N':
+      nMusic.play();
+      break;
 
-r.addEventListener('click', click_r);
+    case 'G':
+      gMusic.play();
+      break;
 
-u.addEventListener('click', click_u);
+    default:
+      console.log('wrong box clicked');
+  }
+}
 
-m.addEventListener('click', click_m);
+drum.forEach(element => {
+  element.addEventListener('click',checkClick)
+});
 
-i.addEventListener('click', click_i);
-
-n.addEventListener('click', click_n);
-
-g.addEventListener('click', click_g);
+// # For music play and pause
 
 let randomNum = Math.floor(Math.random() * 10) + 1;
 // console.log('music' + randomNum + '.mp3');
 let musics = new Audio('musics/music' + randomNum + '.mp3');
-console.log(musics)
 
 play.addEventListener('click', () => {
   musics.play();
@@ -71,6 +66,8 @@ play.addEventListener('click', () => {
 pause.addEventListener('click', () => {
   musics.pause();
 });
+
+// # for pressing keys value 
 
 function checkKeyPress(e) {
   let keys = e.key;
