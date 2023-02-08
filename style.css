@@ -42,7 +42,30 @@ h1 {
   width: 150px;
   height: 150px;
   margin: 10px;
+  cursor: pointer;
 }
+
+.d {
+}
+
+.r {
+}
+
+.u {
+}
+
+.m {
+}
+
+.M {
+}
+
+.e {
+}
+
+.R {
+}
+
 
 .game-over {
   background-color: red;
